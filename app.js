@@ -22,7 +22,7 @@ function checkInputs() {
 	if(usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
 	} else if(!isNaN(usernameValue)){
-		setErrorFor(username,"should be number")
+		setErrorFor(username,"must be text only")
 	} else {
 		setSuccessFor(username);
 	}
