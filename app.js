@@ -21,6 +21,8 @@ function checkInputs() {
 	
 	if(usernameValue === '') {
 		setErrorFor(username, 'Username cannot be blank');
+	} else if(!isNaN(usernameValue)){
+		setErrorFor(username,"should be number")
 	} else {
 		setSuccessFor(username);
 	}
@@ -33,11 +35,11 @@ function checkInputs() {
 		setSuccessFor(email);
 	}
     
-    if(mobilenoValue === '') {
+    	if(mobilenoValue === '') {
 		setErrorFor(mobileno, 'Mobile Number cannot be blank');
-    } else if (!isMobile(mobilenoValue)) {
-		setErrorFor(mobileno, 'Mobile Number must be in 10 digits');
-    }else {
+    	} else if (!isMobile(mobilenoValue)) {
+		setErrorFor(mobileno, 'It must be in 10 digits');
+    	} else {
 		setSuccessFor(mobileno);
 	} 
     
